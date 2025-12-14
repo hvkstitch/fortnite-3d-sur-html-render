@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: battle-royale-3d
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+```
+
+### 6. **.gitignore**
+```
+node_modules/
+.env
+*.log
+.DS_Store
